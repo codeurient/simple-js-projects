@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #6f36ff;
+}
+.wrapper{
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    background: #fff;
+    position: absolute;
+    border-radius: 10px;
+    /* 
+    scale Z oxu istiqametinde qutunu one dogru getirerek boyudurmus kimi effekt yaradir.
+    Tek-tek olculeri boyutmek evezine bele bir life hack etmek olur. 
+    */
+    transform: translate(-50%, -50%) scale(1.4);
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-transform: translate(-50%, -50%) scale(1.4);
+    -moz-transform: translate(-50%, -50%) scale(1.4);
+    -ms-transform: translate(-50%, -50%) scale(1.4);
+    -o-transform: translate(-50%, -50%) scale(1.4);
+}
+.wrapper header{
+    color: #6f36ff;
+    font-size: 23px;
+    font-weight: 500;
+    padding: 17px 30px;
+    border-bottom: 1px solid #bfbfbf;
+}
+.wrapper header.active{
+    cursor: move;
+    user-select: none;
+}
+.wrapper .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px 30px 40px;
+}
+.content .icon{
+    height: 95px;
+    width: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 5px solid #6f36ff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.content .icon i{
+    color: #6f36ff;
+    font-size: 60px;
+}
+.content .title{
+    font-size: 29px;
+    font-weight: 500;
+    margin: 15px 0;
+}
+.content p{
+    font-size: 16px;
+    text-align: center;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="section">
+            <div class="emojis">
+                <li class="slide-emoji"><img src="emojis/emoji-1.png" alt=""></li>
+                <li><img src="emojis/emoji-2.png" alt=""></li>
+                <li><img src="emojis/emoji-3.png" alt=""></li>
+                <li><img src="emojis/emoji-4.png" alt=""></li>
+                <li><img src="emojis/emoji-5.png" alt=""></li>
+            </div>
+        </div>
+
+        <div class="slider">
+            <!-- "thumb" artim ve azalim etmek ucun istifade edilen dairedir -->
+            <div class="thumb"><span><!-- span daire icindeki dairedi --></span></div>
+            <!-- bu div tag-i input icerisinde olan duz xetdir -->
+            <div class="progress-bar"></div>
+            <!-- input elementinin avto qurasdirili olan yumru artirib-azaldan dairesini gizletmisik -->
+            <input type="range" min="0" max="100" value="0">
+        </div>
+
+    </div>
+</body>
+</html>

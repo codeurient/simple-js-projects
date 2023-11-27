@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#4671EA, #AC34E7);
+}
+.wrapper{
+    width: 470px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 25px 25px 30px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.wrapper h2{
+    color: #4671EA;
+    font-size: 28px;
+    text-align: center;
+}
+.wrapper textarea{
+    width: 100%;
+    height: 59px;
+    padding: 15px;
+    outline: none;
+    resize: none;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border-color: #bdbdbd;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    max-height: 350px;
+}
+/* 
+    html terefde bu tag required atributu almalidir yoxsa, focus ve valid islemeyecekdir.
+
+    1) :focus - yeni, textarea tagi secildikde asagidaki css kodlari islesin
+    2) :valid - eger bu kod olmasa ve biz textarea sahesini secdikden sonra kenara
+                kliklesek, onda asagidaki css kodlari fealiyyetini dayandiracaqdir.
+                VALID dedikde ise yeni hem textarea sahesi secildikde hemde kursoru 
+                secili saheden kenara klikledikde bu css kodlari aktiv olsun demis
+                oluruq.
+*/
+textarea:is(:focus, :valid){
+    border-width: 2px;
+    /* 
+        kursoru yazi yazmaq ucun bu sahenin icine qoyduqda 
+        hemin sahenin icinde ic bosluq yaranacaqdir.
+    */
+    padding: 14px;
+    border-color: #4671EA;
+}
+/* 
+    bu metod overflow:hidden; ile eynidir 
+    sadece olaraq:
+    1) overflow:hidden; dedikde scroll etdirmek olmur kursor ile
+    2) width: 0px; dedikde ise scroll cubugu gizlenilir ve scroll etmek olur
+*/
+textarea::-webkit-scrollbar{
+    width: 0px;
+}
